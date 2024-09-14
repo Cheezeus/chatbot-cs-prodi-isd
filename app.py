@@ -10,7 +10,7 @@ from llama_index.retrievers.bm25 import BM25Retriever
 from llama_index.core.chat_engine import CondensePlusContextChatEngine
 from llama_index.core.retrievers import QueryFusionRetriever
 from llama_index.core import Document
-import fitz  # PyMuPDF
+import fitz  
 
 import nest_asyncio
 nest_asyncio.apply()
@@ -52,12 +52,12 @@ Settings.embed_model = OllamaEmbedding(base_url="http://127.0.0.1:11434", model_
 @st.cache_resource(show_spinner=False)
 def load_data(_arg=None, vector_store=None):
     with st.spinner(text="Loading and indexing – hang tight! This should take a few minutes."):
-        # Read & load PDF documents from folder using SimpleDirectoryReader
+     # pdf
         reader = SimpleDirectoryReader(input_dir="./docs", recursive=True)
         documents = reader.load_data()
         st.write(f"Loaded pdf with {len(documents)} rows")
 
-    # Read CSV data
+    # csv
     csv_file_path = "./docs/kontak.csv"
     csv_data = None
     if csv_file_path:
@@ -69,7 +69,7 @@ def load_data(_arg=None, vector_store=None):
             st.error(f"Error loading CSV: {e}")
             return None
 
-    # Process CSV data into documents
+    
     csv_documents = []
     if csv_data is not None:
         unique_documents = {}
@@ -88,7 +88,7 @@ def load_data(_arg=None, vector_store=None):
 
         csv_documents = list(unique_documents.values())
 
-    # Combine PDF and CSV documents
+  
     documents.extend(csv_documents)
 
     if vector_store is None:
