@@ -836,71 +836,45 @@ No.      Kode                    Mata Kuliah             IF    SIB     DSA      
 
                                                     19
 ---
-            Semester 5
-            No.      Kode                    Mata Kuliah      IF  SIB  DSA       Prasyarat
-              7    TF4551 Statistika Terapan                  0    0     3  K. StatDas
-                                                                            (TF4227)
-              8    TF4402 Matematika Bisnis (MatBis)          0    3     0
-              9               MK Konsentrasi (1x)             3    3     0  Selesai ≥ 60 SKS
-             10 FD4508 Technopreneurship #                    3    3     3  Selesai ≥ 60 SKS
-                                       Jumlah                 18  18    18
+Semester 5
+No.      Kode                    Mata Kuliah      IF  SIB  DSA       Prasyarat
+7    TF4551 Statistika Terapan                    0    0     3  K. StatDas (TF4227)
+8    TF4402 Matematika Bisnis (MatBis)            0    3     0
+9    MK Konsentrasi (1x)                          3    3     0  Selesai ≥ 60 SKS
+10 FD4508 Technopreneurship #                     3    3     3  Selesai ≥ 60 SKS
+                         Jumlah                  18   18    18
 
-            Semester 6 (LEaP: Glocal Exposure)
-            No.      Kode                    Mata Kuliah      IF  SIB  DSA       Prasyarat
-              1    TF4261 Kerja Praktek                       2    2     2  Selesai ≥ 85 SKS
-              2               MK Pilihan (6x)                 18  18    18  Selesai ≥ 60 SKS
-                                       Jumlah                 20  20    20
+Semester 6 (LEaP: Glocal Exposure)
+No.      Kode                    Mata Kuliah      IF  SIB  DSA       Prasyarat
+1    TF4261 Kerja Praktek                         2    2    2  Selesai ≥ 85 SKS
+2               MK Pilihan (6x)                  18   18   18  Selesai ≥ 60 SKS
+                                       Jumlah    20   20   20
 
 Semester 6 (LEaP: Research & Innovation)
-No.      Kode                    Mata Kuliah
-  1    TF4261 Kerja Praktek
-  2    TF4538 Research/Startup Immersion
-  3    TF4539 Professional Development
-  4               MK Pilihan (2x)
-                          Jumlah
-
-IF       SIB     DSA         Prasyarat
-2         2        2     Selesai ≥ 85 SKS
-6         6        6     Selesai ≥ 85 SKS
-6         6        6     Selesai ≥ 85 SKS
-6         6        6     Selesai ≥ 60 SKS
-20       20       20
+No.      Kode     Mata Kuliah                   IF       SIB     DSA         Prasyarat
+  1    TF4261 Kerja Praktek                     2         2        2     Selesai ≥ 85 SKS
+  2    TF4538 Research/Startup Immersion        6         6        6     Selesai ≥ 85 SKS
+  3    TF4539 Professional Development          6         6        6     Selesai ≥ 85 SKS
+  4               MK Pilihan (2x)               6         6        6     Selesai ≥ 60 SKS
+                         Jumlah                20        20       20
+                          
 
 Semester 6 (LEaP: Industrial Experience)
-No.      Kode                    Mata Kuliah
-  1    TF4261 Kerja Praktek
-  2    TF4540 Industrial Training
-  3    TF4539 Professional Development
-  4               MK Pilihan (2x)
-                           Jumlah
+No.      Kode     Mata Kuliah                  IF       SIB     DSA         Prasyarat
+  1    TF4261 Kerja Praktek                    2         2        2     Selesai ≥ 85 SKS
+  2    TF4540 Industrial Training              6         6        6     Selesai ≥ 85 SKS
+  3    TF4539 Professional Development         6         6        6     Selesai ≥ 85 SKS
+  4               MK Pilihan (2x)              6         6        6     Selesai ≥ 60 SKS
+                         Jumlah               20        20       20
 
-IF       SIB     DSA         Prasyarat
-2         2        2     Selesai ≥ 85 SKS
-6         6        6     Selesai ≥ 85 SKS
-6         6        6     Selesai ≥ 85 SKS
-6         6        6     Selesai ≥ 60 SKS
-20       20       20
 
-Semester 6 (LEaP: Community Engagement)
-No.      Kode                    Mata Kuliah
-  1    TF4261 Kerja Praktek
-  2    TF4541 Community Development
-  3    TF4539 Professional Development
-  4               MK Pilihan (2x)
-
-IF       SIB     DSA         Prasyarat
-2         2        2     Selesai ≥ 85 SKS
-6         6        6     Selesai ≥ 85 SKS
-6         6        6     Selesai ≥ 85 SKS
-6         6        6     Selesai ≥ 60 SKS
-
-                                                          20
----
-                                                                                      Kurikulum
-
-  Semester 6 (LEaP: Community Engagement)
-  No.     Kode                     Mata Kuliah                   IF     SIB   DSA         Prasyarat
-                            Jumlah                               20     20     20
+Semester 6 (LEaP: Community Engagement)  
+No.      Kode      Mata Kuliah                IF       SIB     DSA         Prasyarat
+  1    TF4261 Kerja Praktek                   2         2        2     Selesai ≥ 85 SKS
+  2    TF4541 Community Development           6         6        6     Selesai ≥ 85 SKS
+  3    TF4539 Professional Development        6         6        6     Selesai ≥ 85 SKS
+  4               MK Pilihan (2x)             6         6        6     Selesai ≥ 60 SKS
+                   Jumlah               20        20       20
 
 Semester 6 (Paket Minor)
   No.     Kode                    Mata Kuliah                    IF     SIB   DSA        Prasyarat
@@ -920,7 +894,7 @@ Semester 7
                    / COP (TF4994)
                             Jumlah                              18      18     18
 
-  Semester 8
+Semester 8
   No.     Kode                    Mata Kuliah                    IF     SIB   DSA        Prasyarat
    1    TF4999 Skripsi                                           6      6       6     K. Metpen
                                                                                       (TF4259),
@@ -1053,7 +1027,7 @@ No.      Kode                      Mata Kuliah           SKS         Prasyarat
  21 TF4322 Sistem Informasi Manajemen                      2
  22 TF4510 Topik Khusus Informatika                        3
  23 TF4535 Topik Khusus Sistem Informasi Bisnis            3
- 24 TF4xxx        Topik Khusus Data Science & Analytics    3
+ 24 TF4xxx Topik Khusus Data Science & Analytics           3
  25 TF4556 Topik Pengayaan I                               3
  26 TF4557 Topik Pengayaan II                              3
  27 TF4558 Topik Pengayaan III                             3
@@ -1106,130 +1080,139 @@ Keterangan:
 ---
          Alur Studi Program Studi Informatika
 Alur Studi Program Studi Informatika
-    Semester ]                Semester 2           Semester 3         Semester 4          Semester 5        Semester 6         Semester 7      Semester 8
-   Total SkS: 20             Total SkS: 20        Total SkS: 19      Total SkS: 20        Total Sks: 18    Totol SkS; 20      Total SkS: 18    Total SkS: 9
-  Dota Anakytor                Basis Data       Soltmare Desizn        Rekayjsa                                               Manjlemen
-                                 (3 Sksi        and Areniiectue    Peranakul Lunjk                                              Prorek TI
-      02 SKS)                                        (3 Sksi            (3 Sksi                                                  (3 Sks)
-                                Jaringan                                 Cyber                                                  Ke:wotk
-                               Komnputet                              Operations                                                Delenie
-                                 (3 Sksi                                   SkS)                                                  (3 Sksi
-   Dasar Sistem                                  Ansitektur dun                              Sistem                            Metodologi
-    Komnputer                                                       Ststem Opcrs          Terdistfibus]    Kera Prktek          Penelitan         Skripsi
-      (2 Sksi                                       Komnputer           (3 Sksi              (3 Sksi          42 Sksi            (3 Sks)          (6 SkSi
-                                                     43 Sksi
-                                                 Teknologi Wcb     Web Framewoit                          LEAP Industrial
-                                                     (3 Sksi       and Deployment                             Tcaning
-                                                                        (J Sksi                               06 SkS)
-  Nroritma dan               Pemrogramon                               Amncial                           LEAP Professlonal
-  Pemrograman                Berorientasi         Struatur Dato    Inte genceand        User Experetee     Development
-      (5 Sksi                    Obyck               43 SkS)       Mochin Lejmnina           (3 Sksi          46 SkS)
-                                 (3 SkSi                                (3 Sksi
-                                                   Desain dan                                Granka                         M< Konsentrasi
-                                               Analisis Algoritma                          Komputer                              (3 SkS)
-                                                     43 Sksi                                 (3 Sksi
-     Kalkulus |               Matematika                             Ajabar Liniet          Metode          Mk Pilihan      Mk Konsentrsi    MK Konsenteu:|
-      (3 Sksi                    Disknt                                 (3 Sks)             Numceik           (3 Sks)            (3 Sks)          (3 Sksi
-                                   SkSi                                                        SkS)
-                            Statutra Dasar                                              MK Konscntrasi      MkPilhan        MK Konsentrasi
-                                 (3 Sksi                                                     (3 Sksi          (3 Sksi            (3 Sksi
-  Bahasa Inegris              Komunikas                                                     Techno
-      (2 Sksi                Interpersonal                                                prencurship
-                                 (3 Sksi                                                     (3 SkSi
-    Agama dun                  Pancasila       Kewargancganan        Etka Proles|
- Hidup Bermakna                  (2 Sksi             (2 Sksi            (2 Sksi
+    Semester 1                Semester 2           Semester 3         Semester 4          Semester 5        Semester 6         Semester 7      Semester 8
+   Total SKS: 20             Total SKS: 20        Total SKS: 19      Total SKS: 20        Total SKS: 18    Totol SKS: 20      Total SKS: 18    Total SKS: 9
+  Data Analytics               Basis Data       Software Design        Rekayasa                                               Manajemen
+   Essentials                  (3 SKS)        and Architecture    Perangkat Lunak                                              Proyek TI
+     (2 SKS)                                        (3 SKS)            (3 Sks)                                                  (3 SKS)
+                                Jaringan                                Cyber                                                  
+                               Komputer                              Operations                                             Network Defense
+                               (3 SKS)                                  (3SKS)                                                  (3 SKS)
+   Dasar Sistem                                  Arsitektur dan                            Sistem                            
+    Komputer                                      Organisasi         Sistem Operasi       Terdistribusi    Kerja Praktek   Metodologi Penelitian  Skripsi
+     (2 SKS)                                       Komputer           (3 SKS)              (3 SKS)          (2 SKS)            (3 SKS)            (6 SKS)
+                                                   (3 SKS)
+
+                                                 Teknologi Web     Web Frameworks                         LEAP Industrial
+                                                  (3 SKS)       and Deployment                             Training
+                                                                        (3 SKS)                             (6 SKS)
+  Algoritma dan               Pemrograman                            Artificial                           
+  Pemrograman                Berorientasi         Struktur Data    Intelligence and      User Experience  LEAP Profesional
+     (5 SKS)                    Obyek               (3 SKS)       Machine Learning          (3 SKS)         Development
+                              (3 SKS)                                (3 SKS)                                (6 SKS)
+                                                   Desain dan                             Grafika                         Mk Konsentrasi
+                                               Analisis Algoritma                         Komputer                              (3 SKS)
+                                                  (3 SKS)                                  (3 SKS)
+     Kalkulus 1               Matematika                             Aljabar Linier          Metode          Mk Pilihan    Mk Konsentrasi    MK Konsentrasi
+      (3 SKS)                  Diskrit                                 (3 Sks)             Numerik           (3 SKS)            (3 SKS)        (3 SKS)
+                              (3 SKS)                                                     (3 SKS)
+                                                                                   
+                            Statistika Dasar                                              MK Konsentrasi    Mk Pilihan    MK Konsentrasi
+                              (3 SKS)                                                     (3 SKS)            (3 SKS)          (3 SKS)
+                                                                                                        
+  Bahasa Inggris              Komunikasi                                                   Techno
+      (2 Sks)                Interpersonal                                               preneurship
+                              (3 SKS)                                                      (3 SKS)
+                                                                                          
+    Agama dan                Pancasila       Kewarganegaraan        Etika Profesi
+ Hidup Bermakna               (2 SKS)             (2 SKS)            (2 SKS)
       (4Sks)
-      Bahasa                                          Dleital
-    Indonesh                                       Lezdershlp
-      (2 Sksi                                         (2 Sksi
+
+      Bahasa                                      Digital
+    Indonesia                                   Leadership
+      (2 SKS)                                     (2 SKS)
                                                                                     26
 ---
                                                                                                                                                     Kurikulum
 
          Alur Studi Program Sistem Informasi Bisnis
 Alur Studi Program Sistem Informasi Bisnis
-   scmesicr [                 Semcsicr 2                Seresier 3       Scmesict &           Scmestet 5            Semesicr 6        Semestct 7            Scmester 8
-   Total SkS: 20             Total SkS 20              Total SkS: 19    Total SkS: 20         Total SKS: 18        Total SKS: 20     Total SkS: 18          Total SkS: 9
-    Pengantar                                             Analisis        Rekayasa                                                   Manalemen
-    Akuntansi                 Basts Data                dun Desain    Perngkat Lunak                                                   Provek TI
-        SksI                    (3 SkSi              Sustem Infofas]       (3 Sksi                                                      03 Sksi
-                                                             SkSh
-                                                                           Anjlisa             Enterprise
-                                                                        Proses Bisnts           Rucource
-                                                                           (3 S*S)             Plannina(3 SkSi
-                               Jaringan                                     Cyber
-                              Komputet                                   Operations
-                                (3 SkS]                                    (3 Sks)                                                      (3 Sksi
-   Dasar Sistem                                       Arshektur dan                              Sistem                               Metodologi
-    Komputer                                             Organtsasi    Sistem Opcrasi         Terdlstr busl        Kerja Praktek       Penelinan               Skripsi
-     42 Sksi                                             Komputer          (3 Sksi                 SkSi               (2 Sksi           43 Sksi                (6 SKS)
-                                                          (3 S*5]
-  Ngoritma dan              Pemrorrmjn                                     Mnncibl                                LEAP Industral
-  Pemrogruman                Derorientas               Strustu Data    Inteeence and                                  Training
-     (5 Sksi                    Obyck                     43 SkS]     Manchine Lexmina                                06 SkSi
-                                (3 Sks]
-                                                        Tata Kelola                                             LEAP Protcsclonal
-                                                         Tekno ogl                          Usec Experence        Deiclopmnent
-                                                         Intormjsi                               (3 Sksi                 Sk5i
-                                                             Sksi
-                                                      Tekriologl Web  Wcb Framcworts                                               MK Konsentrasi
-                                                          43 Sksi          (3 S*S)                                                      (3 Sks)
-    Kalkulus [               Matematika                                                       Matematika            MK Pilinan     MKKonscntcs            MkKonscntns
-        Sksi                    Diskrit                                                          Blnls                03 S*si              SkSi                (3 Sksi
-                                (3 SkSI                                                          (3 SkSI
-                           Stanstka Daxat                                                   MK Konsenttasi          MK Pihhan      Mk Konsentrasi
-                                (3 SkSi                                                          (3 SkS)              (3 SkS)           03 Sksi
-  Bahasa Inggrbs              Komunikas                                                         Techno-
-      (2 Sksi               Interperional                                                     pfeneurshlp
-                                (3 SkSi                                                          (3 SkS)
-   Aeama dan                  Pancasila              Kewraneanan         Etika Prolesl
- Hidup Befmakna                 (2 Sksi                      Sksi          (2 Sks)
-     asksi
-     Bahasa                                               Deital
-    Indoncra                                            Leadership
-      (2 Sksi                                             (2 S*si
+    Semester 1                Semester 2           Semester 3         Semester 4          Semester 5        Semester 6         Semester 7        Semester 8
+   Total SKS: 20             Total SKS: 20        Total SKS: 19      Total SKS: 20        Total SKS: 18    Totol SKS: 20      Total SKS: 18      Total SKS: 9
+  Pengantar Akuntansi         Basis Data       Analisis dan            Rekayasa                                               Manajemen
+     (2 SKS)                   (3 SKS)      Desain Sistem Informasi    Perangkat Lunak  Enterprise Resource                   Proyek TI
+                                                  (3 SKS)            (3 Sks)                Planning                                (3 SKS)
+                                Jaringan                                Cyber               (3 SKS)                                   
+                               Komputer                              Operations                                             
+                               (3 SKS)                                  (3SKS)                                                  
+   Dasar Sistem                                  Arsitektur dan                            Sistem                            
+    Komputer                                      Organisasi         Sistem Operasi       Terdistribusi    Kerja Praktek   Metodologi Penelitian  Skripsi
+     (2 SKS)                                       Komputer           (3 SKS)              (3 SKS)          (2 SKS)            (3 SKS)            (6 SKS)
+                                                   (3 SKS)
+
+                                                 Teknologi Web     Web Frameworks         User           LEAP Industrial
+                                                  (3 SKS)          and Development        Experience                Training
+                                                                     (3 SKS)              (3 SKS)                 (6 SKS)
+  Algoritma dan               Pemrograman                            Artificial                           
+  Pemrograman                Berorientasi         Struktur Data    Intelligence and                      LEAP Profesional
+     (5 SKS)                    Obyek               (3 SKS)       Machine Learning                        Development
+                              (3 SKS)                                (3 SKS)                                (6 SKS)
+                                               Tata Kelola           Analisis Proses    Matematika                         Mk Konsentrasi
+                                               Teknologi Informasi    Bisnis              Bisnis                             (3 SKS)
+                                                  (3 SKS)             (3 SKS)            (3 SKS)
+     Kalkulus 1               Matematika                                                                 Mk Pilihan       Mk Konsentrasi         MK Konsentrasi
+      (3 SKS)                  Diskrit                                                                     (3 SKS)            (3 SKS)            (3 SKS)
+                              (3 SKS)                                                    
+                                                                                   
+                            Statistika Dasar                                           MK Konsentrasi    Mk Pilihan       MK Konsentrasi
+                              (3 SKS)                                                    (3 SKS)            (3 SKS)          (3 SKS)
+                                                                                                        
+  Bahasa Inggris              Komunikasi                                                  Techno           
+      (2 Sks)                Interpersonal                                              preneurship
+                              (3 SKS)                                                     (3 SKS)
+                                                                                          
+    Agama dan                Pancasila       Kewarganegaraan        Etika Profesi
+ Hidup Bermakna               (2 SKS)             (2 SKS)            (2 SKS)
+      (4Sks)
+
+      Bahasa                                      Digital
+    Indonesia                                   Leadership
+      (2 SKS)                                     (2 SKS)
                                                                                         27
 ---
          Alur Studi Program Data Science and Analytics
 Alur Studi Program Data Science and Analytics
-    semestcr [                Scmesier 2                Semester 3          Scmestct =                Scmester 5         Scmesic 6         Semestct 7       Scmester 8
-   Total SkS: 20             Total SKS: 20             Total SkS: 19       Total SkS: 20             Total SKS: 18      Total SkS: 20      Total SkS: 18    Total SkS: 9
-  Data Analytcs               Basis Data                                    Rekayas                                                        Manalemen
-                                (3 SkS]                                  Perngkat Lunjk                                                     Provek TI
-      (2 Sks)                                                                 (3 Sksi                                                         43 Sksi
-                               Jotingun                                       Cyber
-                               Komputet                                     Operations                                                        utent
-                                (3 SkSi                                       (3 Sks)                                                         (3 Sksi
-   04sa( Sistem                                       Arsitektur dan                                    Sistem                             Metocologi
-    Komputer                                             Organtsasi       sistem Opcrasi              Verdistt busi     Kerja Praltck       Penelnan          skflpsi
-     (2 Sksi                                             komputcr             (3 Sks)                   (3 Sksi             42 SkS)           (3 SkS)         (6 SkS)
-                                                             Sksi
-  Agoritma dan              Pemrograman                                      Mutkcijl                                  LEAP Industrial
-  Pemrorrman                 Bcroricntjs               Struktur Data     Inte gence and                                    Training
-        SkSI                     Obyer                     (3 S*S)      MachintLeatmong                                     06 SkS)
-                                (3 Sks]                                       03 Sks)
-                                                        Desain dan                                 User Eapenence     LEAP Ptofessional
-                                                     Analisis Ngoritma                                  (3 S8S)         Devclopment
-                                                          (3 Sksi                                                           06 SkS)
-                                                      Teknologi Web     Wcb Franicwrort
-                                                          (3 Sksi        ana Dcplormcnt(3 SkSi
-                                                       Data Mlning                                  Presentasi dan                        MK Konsentrasi
-                                                             SkSi                                   Viqualisasi Data                          (3 Sksi
-                                                                                                           Sksi
-    Kalkulus |               Matematika                                    Alobar Lintct                Metode           MK Pihan        MKKonscntrsi     MkKonscntfs
-        Sksi                     Diskrit                                      (3 Sks)                  Numerk               43 Sksi              Sksi         (3 Sksi
-                                (3 SkSi                                                                 (3 Sksi
-                           Statstka Dasar                                                              Statisuka         MKP hhan         MK Konsentras
-                                (3 SkSi                                                                 Teropun             (3 SkS)           43 Sksi
-                                                                                                        (3 SkSi
-  Bahasa Inggrts              Komunikosi                                                                Techno
-      (2 Sksi                Interpersonal                                                           ptencurshlp
-                                (3 Sksi                                                                 (3 SkS)
-    Aguma dan                  Pancasilj             Kewaigancearazn       Etika Prolest
- Hdmp                           (2 Sksi                      Sksi             (2 Sks)
-     Bahas                                                 Daital
-    Indonesia                                           Leadership
-      (2 Sksi                                              (2 S*si
+    Semester 1                Semester 2           Semester 3         Semester 4          Semester 5        Semester 6         Semester 7      Semester 8
+   Total SKS: 20             Total SKS: 20        Total SKS: 19      Total SKS: 20        Total SKS: 18    Totol SKS: 20      Total SKS: 18    Total SKS: 9
+  Data Analytics               Basis Data                          Rekayasa                                               Manajemen
+   Essentials                  (3 SKS)                             Perangkat Lunak                                              Proyek TI
+     (2 SKS)                                                         (3 Sks)                                                  (3 SKS)
+                                Jaringan                                Cyber                                                  
+                               Komputer                              Operations                                             Network Defense
+                               (3 SKS)                                  (3SKS)                                                  (3 SKS)
+   Dasar Sistem                                  Arsitektur dan                            Sistem                            
+    Komputer                                      Organisasi         Sistem Operasi       Terdistribusi    Kerja Praktek   Metodologi Penelitian  Skripsi
+     (2 SKS)                                       Komputer           (3 SKS)              (3 SKS)          (2 SKS)            (3 SKS)            (6 SKS)
+                                                   (3 SKS)
+
+                                                 Teknologi Web     Web Frameworks         Presentasi      LEAP Industrial
+                                                  (3 SKS)       and Deployment       dan Visualisasi Data    Training
+                                                                        (3 SKS)         (3 SKS)              (6 SKS)
+  Algoritma dan               Pemrograman                            Artificial                           
+  Pemrograman                Berorientasi         Struktur Data    Intelligence and      User Experience  LEAP Profesional
+     (5 SKS)                    Obyek               (3 SKS)       Machine Learning          (3 SKS)         Development
+                              (3 SKS)                                (3 SKS)                                (6 SKS)
+                                                   Desain dan                             Grafika                         Mk Konsentrasi
+                                               Analisis Algoritma                         Komputer                              (3 SKS)
+                                                  (3 SKS)                                  (3 SKS)
+     Kalkulus 1               Matematika          Data Mining      Aljabar Linier          Metode          Mk Pilihan    Mk Konsentrasi    MK Konsentrasi
+      (3 SKS)                  Diskrit              (3 SKS)           (3 Sks)             Numerik           (3 SKS)            (3 SKS)        (3 SKS)
+                              (3 SKS)                                                     (3 SKS)
+                                                                                   
+                            Statistika Dasar                                              Statistika    Mk Pilihan    MK Konsentrasi
+                              (3 SKS)                                                     Terapan            (3 SKS)          (3 SKS)
+                                                                                           (3 SKS)             
+  Bahasa Inggris              Komunikasi                                                   
+      (2 Sks)                Interpersonal                                               Technopreneurship
+                              (3 SKS)                                                      (3 SKS)
+                                                                                          
+    Agama dan                Pancasila       Kewarganegaraan        Etika Profesi
+ Hidup Bermakna               (2 SKS)             (2 SKS)            (2 SKS)
+      (4Sks)
+
+      Bahasa                                      Digital
+    Indonesia                                   Leadership
+      (2 SKS)                                     (2 SKS)
                                                                                                28
 ---
                      Kurikulum
