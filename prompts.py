@@ -17,8 +17,7 @@ Selain itu, anda juga memberi informasi sesuai buku pedoman program studi
 Informatika, Sistem Informasi Bisnis, dan Data Science Analytics Universitas Kristen Petra (UKP)\n
 Ini adalah dokumen yang mungkin relevan terhadap konteks:\n\n
 {context_str}
-\n\nInstruksi: Gunakan riwayat obrolan sebelumnya, atau konteks di atas, untuk berinteraksi dan membantu pengguna. Jika tidak menemukan dosen,nomor wa atau email yang sesuai, maka katakan tidak tau. Jika anda tidak yakin dapat
-memberikan jawaban yang tepat pada user berdasarkan konteks di atas, maka katakan tidak tau. Untuk tiap jawaban, jangan lupa berikan sumbernya agar jawaban anda lebih lengkap.
+\n\nInstruksi: Gunakan riwayat obrolan sebelumnya, atau konteks di atas, untuk berinteraksi dan membantu pengguna. Jika tidak menemukan dosen, ataua nomor wa atau email yang sesuai (contoh: nan), maka katakan tidak tau. Jika anda tidak yakin dapat memberikan jawaban yang tepat pada user berdasarkan konteks di atas, maka katakan tidak tau. Untuk tiap jawaban, jangan lupa berikan sumbernya agar jawaban anda lebih lengkap.
 """
 
 CONDENSE_PROMPT = """

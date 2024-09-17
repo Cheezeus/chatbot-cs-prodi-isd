@@ -75,6 +75,10 @@ def load_data(_arg=None, vector_store=None):
     return index
 
 
+# def set_chat_history(messages):
+#     chat_history = [ChatMessage(role=message["role"], content=message["content"]) for message in messages]
+#     self.chat_store.store = {"chat_history": self.chat_history}
+
 def create_chat_engine(index):
     reranker = SentenceTransformerRerank(top_n=6, model="BAAI/bge-reranker-large")
     memory = ChatMemoryBuffer.from_defaults(token_limit=16384)
@@ -108,7 +112,6 @@ if "chat_engine" not in st.session_state.keys():
     init_history = [
         ChatMessage(role=MessageRole.ASSISTANT, content="Halo! ada yang bisa dibantu?"),
     ]
-    memory = ChatMemoryBuffer.from_defaults(token_limit=16384)
     st.session_state.chat_engine = create_chat_engine(index)
 
 # Display chat messages from history on app rerun
