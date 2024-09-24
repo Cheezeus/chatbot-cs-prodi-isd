@@ -2,16 +2,16 @@ import pandas as pd
 import streamlit as st
 from llama_index.llms.ollama import Ollama
 from llama_index.embeddings.ollama import OllamaEmbedding
-from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings
+from llama_index.core import VectorStoreIndex, Settings, Document
 from llama_index.core.llms import ChatMessage, MessageRole
 from llama_index.core.memory import ChatMemoryBuffer
 from llama_index.core.node_parser import SentenceSplitter
 from llama_index.core.chat_engine import CondensePlusContextChatEngine
 from llama_index.core.postprocessor import SentenceTransformerRerank
-from llama_index.core import Document
 
 from prompts import SYSTEM_PROMPT, CONTEXT_PROMPT, CONDENSE_PROMPT
 
+import os
 import sys
 import logging
 import nest_asyncio
@@ -19,7 +19,6 @@ nest_asyncio.apply()
 
 # Initialize node parser
 splitter = SentenceSplitter(chunk_size=512)
-
 
 logging.basicConfig(stream=sys.stdout, level=logging.WARNING)
 logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
@@ -31,12 +30,24 @@ Settings.embed_model = OllamaEmbedding(base_url="http://127.0.0.1:11434", model_
 @st.cache_resource(show_spinner=False)
 def load_data(_arg=None, vector_store=None):
     with st.spinner(text="Loading and indexing – hang tight! This should take a few minutes."):
-     # pdf
-        reader = SimpleDirectoryReader(input_dir="./docs", recursive=True)
-        documents = reader.load_data()
-        st.write(f"Loaded pdf with {len(documents)} rows")
+        # md file reader
+        md_dir = "./docs"
+        documents = []
+        for filename in os.listdir(md_dir):
+            if filename.endswith(".md"):
+                file_path = os.path.join(md_dir, filename)
+                with open(file_path, "r", encoding="utf-8") as f:
+                    content = f.read()
+                    st.write(f"Loaded Markdown file: {filename}")  # Debug line
+                    document = Document(
+                        content=content,
+                        metadata={"filename": filename}
+                    )
+                    documents.append(document)
+        
+        st.write(f"Loaded {len(documents)} Markdown files")
 
-    # csv
+        # csv
         csv_file_path = "./docs/Dataset Kontak Dosen.csv"
         csv_data = None
         if csv_file_path:
@@ -47,7 +58,6 @@ def load_data(_arg=None, vector_store=None):
             except Exception as e:
                 st.error(f"Error loading CSV: {e}")
                 return None
-
 
         csv_documents = []
         if csv_data is not None:
@@ -67,17 +77,15 @@ def load_data(_arg=None, vector_store=None):
 
             csv_documents = list(unique_documents.values())
 
-
         documents.extend(csv_documents)
+
+        st.write(f"Total documents after merging: {len(documents)}")
 
     if vector_store is None:
         index = VectorStoreIndex.from_documents(documents)
     return index
 
 
-# def set_chat_history(messages):
-#     chat_history = [ChatMessage(role=message["role"], content=message["content"]) for message in messages]
-#     self.chat_store.store = {"chat_history": self.chat_history}
 
 def create_chat_engine(index):
     reranker = SentenceTransformerRerank(top_n=6, model="BAAI/bge-reranker-large")
@@ -112,6 +120,7 @@ if "chat_engine" not in st.session_state.keys():
     init_history = [
         ChatMessage(role=MessageRole.ASSISTANT, content="Halo! ada yang bisa dibantu?"),
     ]
+    memory = ChatMemoryBuffer.from_defaults(token_limit=16384)
     st.session_state.chat_engine = create_chat_engine(index)
 
 # Display chat messages from history on app rerun
