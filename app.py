@@ -10,6 +10,7 @@ from llama_index.core.chat_engine import CondensePlusContextChatEngine
 from llama_index.core.postprocessor import SentenceTransformerRerank
 from llama_index.retrievers.bm25 import BM25Retriever
 from llama_index.core.retrievers import QueryFusionRetriever
+from llama_index.core import SimpleDirectoryReader
 
 from prompts import SYSTEM_PROMPT, CONTEXT_PROMPT, CONDENSE_PROMPT
 
@@ -33,20 +34,9 @@ Settings.embed_model = OllamaEmbedding(base_url="http://127.0.0.1:11434", model_
 def load_data(_arg=None, vector_store=None):
     with st.spinner(text="Loading and indexing – hang tight! This should take a few minutes."):
         # md file reader
-        md_dir = "./docs"
-        documents = []
-        for filename in os.listdir(md_dir):
-            if filename.endswith(".md"):
-                file_path = os.path.join(md_dir, filename)
-                with open(file_path, "r", encoding="utf-8") as f:
-                    content = f.read()
-                    st.write(f"Loaded Markdown file: {filename}")  # Debug line
-                    document = Document(
-                        content=content,
-                        metadata={"filename": filename}
-                    )
-                    documents.append(document)
-        
+        md_dir = "./docs/pedoman"
+        documents = SimpleDirectoryReader(md_dir).load_data()
+
         st.write(f"Loaded {len(documents)} Markdown files")
 
         # csv
@@ -99,7 +89,8 @@ def create_chat_engine(index):
                 docstore=index.docstore, similarity_top_k=5
             ),
         ],
-        num_queries=1,
+        num_queries=4,
+        similarity_top_k=10,
         use_async=True,
     )
     chat_engine = CondensePlusContextChatEngine(
