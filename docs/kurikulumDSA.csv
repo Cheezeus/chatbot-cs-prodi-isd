@@ -1,0 +1,179 @@
+Kurikulum Program Data Science and Analytics (8 Semester),,,,
+,,,,
+,,,,
+Semester 1,,,,
+No.,Kode,Mata Kuliah,SKS,Prasyarat
+1,TF4590,Data Analytics Essentials,2,
+2,TF4205,Dasar Sistem Komputer,2,
+3,TF4204,Algoritma dan Pemrograman (AP) ~ *,5,
+4,FD4505,Kalkulus I,3,
+5,TF4504,Bahasa Inggris,2,
+6,DU4197,Agama & Hidup Bermakna (AHB) #,4,
+7,DU4122,Bahasa Indonesia,2,
+,,Jumlah,20,
+,,,,
+Semester 2,,,,
+No.,Kode,Mata Kuliah,SKS,Prasyarat
+1,TF4229,Basis Data (BD) ~,3,
+2,TF4253,Jaringan Komputer (JarKom),3,
+3,TF4235,Pemrograman Berorientasi Obyek (PBO) ~,3,L. AP (TF4204)
+4,TF4245,Matematika Diskrit (MatDis),3,
+5,TF4227,Statistika Dasar (StatDas) ~,3,
+6,TF4267,Komunikasi Interpersonal (Komal),3,
+7,DU4101,Pancasila #,2,
+,,Jumlah,20,
+,,,,
+Semester 3,,,,
+No.,Kode,Mata Kuliah,SKS,Prasyarat
+1,TF4372,Arsitektur dan Organisasi Komputer (AOK),3,
+2,TF4343,Teknologi Web (TekWeb),3,
+3,TF4219,Struktur Data (SD) ~,3,K. PBO (TF4235)
+4,TF4270,Desain dan Analisis Algoritma (DAA) ~,3,K. PBO (TF4235)
+5,TF4333,Data Mining (DatMin),3,K. StatDas (TF4227)
+6,DU4164,Kewarganegaraan #,2,K. Pancasila (DU4101)
+7,DU4198,Digital Leadership #,2,
+,,Jumlah,19,
+,,,,
+Semester 4,,,,
+No.,Kode,Mata Kuliah,SKS,Prasyarat
+1,TF4255,Rekayasa Perangkat Lunak (RPL),3,K. BD (TF4229)
+2,TF4544,Cyber Operations (CyOps) #,3,K. JarKom (TF4253)
+3,TF4243,Sistem Operasi (SO),3,
+4,TF4578,Artificial Intelligence and Machine Learning (AIML) #,3,K. SD (TF4219)
+5,TF4579,Web Frameworks and Deployment #,3,K. TekWeb (TF4343)
+6,FD4507,Aljabar Linier (ALin),3,
+7,DU4163,Etika Profesi #,2,L. AHB (DU4197)
+,,Jumlah,20,
+,,,,
+Semester 5,,,,
+No.,Kode,Mata Kuliah,SKS,Prasyarat
+1,TF4507,Sistem Terdistribusi,3,K. SO (TF4243)
+2,TF4546,User Experience,3,
+3,TF4550,Presentasi dan Visualisasi Data,3,K. DatMin (TF4333)
+4,TF4247,Metode Numerik,3,
+5,TF4551,Statistika Terapan,3,K. StatDas (TF4227)
+6,FD4508,Technopreneurship #,3,Selesai >= 60 SKS
+,,Jumlah,18,
+,,,,
+Semester 6 (LEaP: Glocal Exposure),,,,
+No.,Kode,Mata Kuliah,SKS,Prasyarat
+1,TF4261,Kerja Praktek,2,Selesai >= 85 SKS
+2,,MK Pilihan (6x),18,Selesai >= 60 SKS
+,,Jumlah,20,
+,,,,
+Semester 6 (LEaP: Research & Innovation),,,,
+No.,Kode,Mata Kuliah,SKS,Prasyarat
+1,TF4261,Kerja Praktek,2,Selesai >= 85 SKS
+2,TF4538,Research/Startup Immersion,6,Selesai >= 85 SKS
+3,TF4539,Professional Development,6,Selesai >= 85 SKS
+4,,MK Pilihan (2x),6,Selesai >= 60 SKS
+,,Jumlah,20,
+,,,,
+Semester 6 (LEaP: Industrial Experience),,,,
+No.,Kode,Mata Kuliah,SKS,Prasyarat
+1,TF4261,Kerja Praktek,2,Selesai >= 85 SKS
+2,TF4540,Industrial Training,6,Selesai >= 85 SKS
+3,TF4539,Professional Development,6,Selesai >= 85 SKS
+4,,MK Pilihan (2x),6,Selesai >= 60 SKS
+,,Jumlah,20,
+,,,,
+Semester 6 (LEaP: Community Engagement),,,,
+No.,Kode,Mata Kuliah,SKS,Prasyarat
+1,TF4261,Kerja Praktek,2,Selesai >= 85 SKS
+2,TF4541,Community Development,6,Selesai >= 85 SKS
+3,TF4539,Professional Development,6,Selesai >= 85 SKS
+4,,MK Pilihan (2x),6,Selesai >= 60 SKS
+,,Jumlah,20,
+,,,,
+Semester 6 (Paket Minor),,,,
+No.,Kode,Mata Kuliah,SKS,Prasyarat
+1,,MK Minor Wajib,12,Selesai >= 85 SKS
+2,,MK Minor Pilihan,8,Selesai >= 85 SKS
+,,Jumlah,20,
+,,,,
+Semester 7,,,,
+No.,Kode,Mata Kuliah,SKS,Prasyarat
+1,TF4317,Manajemen Proyek Teknologi Informasi,3,K. RPL (TF4255)
+2,TF4569,Network Defense,3,K. CyOps(TF4544)
+3,TF4259,Metodologi Penelitian (MetPen),3,Selesai >= 105 SKS
+4,,MK Konsentrasi (3x)/ COP (TF4994),9,Selesai >= 60 SKS
+,,Jumlah,18,
+,,,,
+Semester 8,,,,
+No.,Kode,Mata Kuliah,SKS,Prasyarat
+1,TF4999,Skripsi,6,"K. Metpen (TF4259), Selesai >= 129 SKS"
+2,,MK Konsentrasi (1x),3,Selesai >= 60 SKS
+,,Jumlah,9,
+,,,,
+Konsentrasi DSA (minimal ambil 4 MK),,,,
+No.,Kode,Mata Kuliah,,
+1,TF4548,Business Intelligence,,
+2,TF4542,Deep Learning,,
+3,TF4351,Sistem Informasi Geografis,,
+4,TF4509,Cloud Computing,,
+5,TF4523,Analisis Big Data,,
+6,TF4549,Pemodelan Data untuk Data Science,,
+,,,,
+MK Pilihan,,,,
+No.,Kode,Mata Kuliah,,
+1,TF4295,Teknik Pemodelan dan Simulasi,,
+2,TF4374,Teknologi Open Source,,
+3,TF4571,Digital Forensics,,
+4,TF4355,Administrasi Basis Data,,
+5,TF4532,Manajemen Perangkat Jaringan,,
+6,TF4508,Pemrograman Robotika,,
+7,FD4506,Kalkulus II,,
+8,TF4319,Riset Operasi,,
+9,TF4413,E-Business,,
+10,TF4429,Manajemen Risiko,,
+11,TF4529,Sistem Informasi Sumber Daya Manusia,,
+12,TF4439,Supply Chain Management,,
+13,TF4321,Sistem Informasi Akuntansi (SIA),,
+14,TF4301,Akuntansi Biaya,,
+15,TF4305,Bisnis Internasional,,
+16,TF4303,Aplikasi Sistem Pakar,,
+17,TF4426,Kriptografi & Steganografi,,
+18,TF4552,Internet of Things,,
+19,TF4575,Development Operations,,
+20,TF4273,Basis Data Lanjut,,
+21,TF4322,Sistem Informasi Manajemen,,
+22,TF4510,Topik Khusus Informatika,,
+23,TF4535,Topik Khusus Sistem Informasi Bisnis,,
+24,TF4xxx,Topik Khusus Data Science & Analytics,,
+25,TF4556,Topik Pengayaan I,,
+26,TF4557,Topik Pengayaan II,,
+27,TF4558,Topik Pengayaan III,,
+28,TF4559,Topik Pengayaan IV,,
+29,TF4560,Topik Pengayaan V,,
+30,TF4561,Topik Pengayaan VI,,
+31,TF4562,Topik Pengayaan Singkat I,,
+32,TF4563,Topik Pengayaan Singkat II,,
+33,TF4564,Topik Pengayaan Singkat III,,
+34,TF4565,Topik Pengayaan Singkat IV,,
+35,TF4566,Topik Pengayaan Singkat V,,
+36,TF4567,Topik Pengayaan Singkat VI,,
+,,,,
+MKDU Pilihan,,,,
+No.,Kode,Mata Kuliah,,
+1,DU4154,Etika Keluarga Kristen,,
+2,DU4176,English for Occupational Purposes (EOP),,
+3,DU4196,Friendship Counseling,,
+4,DU4204,Innovation and Start-Up,,
+5,DU4212,Indonesian Culture,,
+6,DU4205,Kajian Gender,,
+7,DU4166,Lingkungan Hidup,,
+8,DU4202,Right and Wrong,,
+9,DU4191,Servant Leader,,
+10,DU4182,Peacebuilding (Studi Perdamaian),,
+11,DU4208,Community Outreach Program (COP),,
+12,DU4209,Disability Studies and Empowerment,,
+,,,,
+Keterangan:,,,,
+Mata kuliah tercetak dengan bintang (*) adalah mata kuliah yang disertai responsi/studio,,,,
+Mata kuliah tercetak dengan tilde (~) adalah mata kuliah yang disertai praktikum.,,,,
+Mata kuliah tercetak dengan hash (#) adalah mata kuliah yang ditawarkan pada international track (dengan pengantar Bahasa Inggris) selain pada regular track (dengan pengantar Bahasa Indonesia).,,,,
+"Mata kuliah COP, dapat digantikan dengan Mata Kuliah Pilihan.",,,,
+Keterangan prasyarat kuliah:,,,,
+"K = Kuliah, MK prasyarat pernah diambil pada semester sebelumnya.",,,,
+"L = Lulus, MK prasyarat pernah diambil pada semester sebelumnya dan lulus.",,,,
+Mata kuliah konsentrasi & pilihan minimum 60% harus dari program yang diikuti.,,,,
