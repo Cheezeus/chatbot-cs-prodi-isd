@@ -39,44 +39,40 @@ def load_data(_arg=None, vector_store=None):
 
         st.write(f"Loaded {len(documents)} Markdown files")
 
-        # csv
-        csv_file_path = "./docs/Dataset Kontak Dosen.csv"
-        csv_data = None
-        if csv_file_path:
-            try:
-                df = pd.read_csv(csv_file_path)
-                st.write(f"Loaded CSV with {len(df)} rows")
-                csv_data = df
-            except Exception as e:
-                st.error(f"Error loading CSV: {e}")
-                return None
+        # csv file reader (multiple CSVs)
+        csv_files_dir = "./docs"
+        csv_data = []
+        for csv_file in os.listdir(csv_files_dir):
+            if csv_file.endswith('.csv'):
+                csv_file_path = os.path.join(csv_files_dir, csv_file)
+                try:
+                    df = pd.read_csv(csv_file_path, skipinitialspace=True, on_bad_lines='skip')
+                    st.write(f"Loaded CSV {csv_file} with {len(df)} rows")
+                    unique_documents = {}
+                    for _, row in df.iterrows():
+                        doc_str = str(row.to_dict())
+                        if doc_str.strip() and doc_str not in unique_documents:
+                            document = Document(
+                                content=doc_str,
+                                metadata={
+                                    "dosen": row.get('Nama Dosen', 'Unknown'),
+                                    "email": row.get('email', 'Unknown'),
+                                    "nomor wa": row.get('No WA', 'Unknown'),
+                                }
+                            )
+                            unique_documents[doc_str] = document
+                    csv_data.extend(unique_documents.values())
+                except Exception as e:
+                    st.error(f"Error loading CSV {csv_file}: {e}")
+                    return None
 
-        csv_documents = []
-        if csv_data is not None:
-            unique_documents = {}
-            for _, row in csv_data.iterrows():
-                doc_str = str(row.to_dict())
-                if doc_str.strip() and doc_str not in unique_documents:
-                    document = Document(
-                        content=doc_str,
-                        metadata={
-                            "dosen": row.get('Nama Dosen', 'Unknown'),
-                            "email": row.get('email', 'Unknown'),
-                            "nomor wa": row.get('No WA', 'Unknown'),
-                        }
-                    )
-                    unique_documents[doc_str] = document
-
-            csv_documents = list(unique_documents.values())
-
-        documents.extend(csv_documents)
+        documents.extend(csv_data)
 
         st.write(f"Total documents after merging: {len(documents)}")
 
     if vector_store is None:
         index = VectorStoreIndex.from_documents(documents)
     return index
-
 
 
 def create_chat_engine(index):
@@ -105,8 +101,20 @@ def create_chat_engine(index):
     )
     return chat_engine
 
+
+def multi_agent_response(prompt, agents):
+    for agent_name, agent in agents.items():
+        if agent["filter"](prompt):
+            st.write(f"Routing to {agent_name}...")
+            response_stream = agent["engine"].stream_chat(prompt)  # Streamed response
+            response_content = "".join(response_stream.response_gen)  # Consume the generator
+            return response_content
+
+    return "Sorry, I couldn't find an appropriate agent to handle your query."
+
+
 # Main Program
-st.title("CS INFOR-SIB-DSA")
+st.title("CS INFOR-SIB-DSA: ")
 
 index = load_data()
 
@@ -117,14 +125,22 @@ if "messages" not in st.session_state:
          "content": "Halo! ada yang bisa dibantu?"}
     ]
 
-# Initialize the chat engine
-if "chat_engine" not in st.session_state.keys():
-    # Initialize with custom chat history
-    init_history = [
-        ChatMessage(role=MessageRole.ASSISTANT, content="Halo! ada yang bisa dibantu?"),
-    ]
-    memory = ChatMemoryBuffer.from_defaults(token_limit=16384)
-    st.session_state.chat_engine = create_chat_engine(index)
+# Initialize the chat engines
+if "chat_engines" not in st.session_state.keys():
+    st.session_state.chat_engines = {
+        "KnowledgeAgent": {
+            "filter": lambda prompt: "kurikulum" in prompt or "pedoman" in prompt,
+            "engine": create_chat_engine(index)
+        },
+        "CSVAgent": {
+            "filter": lambda prompt: "dosen" in prompt or "email" in prompt or "nomor wa" in prompt or "kontak" in prompt,  # Trigger for CSV agent
+            "engine": create_chat_engine(index)
+        },
+        "GeneralAgent": {
+            "filter": lambda prompt: True,  # Default fallback agent
+            "engine": create_chat_engine(index)
+        },
+    }
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
@@ -141,8 +157,8 @@ if prompt := st.chat_input("What is up?"):
 
     with st.chat_message("assistant"):
         with st.spinner("Berpikir..."):
-            response_stream = st.session_state.chat_engine.stream_chat(prompt)
-            st.write_stream(response_stream.response_gen)
+            response = multi_agent_response(prompt, st.session_state.chat_engines)
+            st.markdown(response)
 
-    # Add user message to chat history
-    st.session_state.messages.append({"role": "assistant", "content": response_stream.response})
+    # Add response to chat history
+    st.session_state.messages.append({"role": "assistant", "content": response})
