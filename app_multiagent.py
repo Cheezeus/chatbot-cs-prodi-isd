@@ -31,49 +31,47 @@ Settings.llm = Ollama(model="llama3.1:latest", base_url="http://127.0.0.1:11434"
 Settings.embed_model = OllamaEmbedding(base_url="http://127.0.0.1:11434", model_name="mxbai-embed-large:latest")
 
 @st.cache_resource(show_spinner=False)
-def load_data(_arg=None, vector_store=None):
+def load_data(data_dir=None, csv_dir=None, vector_store=None):
     with st.spinner(text="Loading and indexing – hang tight! This should take a few minutes."):
-        # md file reader
-        md_dir = "./docs/pedoman"
-        documents = SimpleDirectoryReader(md_dir).load_data()
+        documents = []
+        
+        # Load Markdown files for KnowledgeAgent
+        if data_dir:
+            documents = SimpleDirectoryReader(data_dir).load_data()
+            st.write(f"Loaded {len(documents)} Markdown files from {data_dir}")
 
-        st.write(f"Loaded {len(documents)} Markdown files")
-
-        # csv file reader (multiple CSVs)
-        csv_files_dir = "./docs"
-        csv_data = []
-        for csv_file in os.listdir(csv_files_dir):
-            if csv_file.endswith('.csv'):
-                csv_file_path = os.path.join(csv_files_dir, csv_file)
-                try:
-                    df = pd.read_csv(csv_file_path, skipinitialspace=True, on_bad_lines='skip')
-                    st.write(f"Loaded CSV {csv_file} with {len(df)} rows")
-                    unique_documents = {}
-                    for _, row in df.iterrows():
-                        doc_str = str(row.to_dict())
-                        if doc_str.strip() and doc_str not in unique_documents:
-                            document = Document(
-                                content=doc_str,
-                                metadata={
-                                    "dosen": row.get('Nama Dosen', 'Unknown'),
-                                    "email": row.get('email', 'Unknown'),
-                                    "nomor wa": row.get('No WA', 'Unknown'),
-                                }
-                            )
-                            unique_documents[doc_str] = document
-                    csv_data.extend(unique_documents.values())
-                except Exception as e:
-                    st.error(f"Error loading CSV {csv_file}: {e}")
-                    return None
-
-        documents.extend(csv_data)
+        # Load CSV files for CSVAgent
+        if csv_dir:
+            csv_data = []
+            for csv_file in os.listdir(csv_dir):
+                if csv_file.endswith('.csv'):
+                    csv_file_path = os.path.join(csv_dir, csv_file)
+                    try:
+                        df = pd.read_csv(csv_file_path, skipinitialspace=True, on_bad_lines='skip')
+                        st.write(f"Loaded CSV {csv_file} with {len(df)} rows")
+                        unique_documents = {}
+                        for _, row in df.iterrows():
+                            doc_str = str(row.to_dict())
+                            if doc_str.strip() and doc_str not in unique_documents:
+                                document = Document(
+                                    content=doc_str,
+                                    metadata={
+                                        "dosen": row.get('Nama Dosen', 'Unknown'),
+                                        "email": row.get('email', 'Unknown'),
+                                        "nomor wa": row.get('No WA', 'Unknown'),
+                                    }
+                                )
+                                unique_documents[doc_str] = document
+                        csv_data.extend(unique_documents.values())
+                    except Exception as e:
+                        st.error(f"Error loading CSV {csv_file}: {e}")
+            documents.extend(csv_data)
 
         st.write(f"Total documents after merging: {len(documents)}")
 
     if vector_store is None:
         index = VectorStoreIndex.from_documents(documents)
     return index
-
 
 def create_chat_engine(index):
     reranker = SentenceTransformerRerank(top_n=6, model="BAAI/bge-reranker-large")
@@ -101,7 +99,6 @@ def create_chat_engine(index):
     )
     return chat_engine
 
-
 def multi_agent_response(prompt, agents):
     for agent_name, agent in agents.items():
         if agent["filter"](prompt):
@@ -116,7 +113,9 @@ def multi_agent_response(prompt, agents):
 # Main Program
 st.title("CS INFOR-SIB-DSA: ")
 
-index = load_data()
+# Load data only for the KnowledgeAgent (Markdown) and CSVAgent (CSV)
+index_knowledge = load_data(data_dir="./docs/pedoman")  # for KnowledgeAgent (Markdown)
+index_csv = load_data(csv_dir="./docs/csv")  # for CSVAgent (CSV)
 
 # Initialize chat history if empty
 if "messages" not in st.session_state:
@@ -130,16 +129,17 @@ if "chat_engines" not in st.session_state.keys():
     st.session_state.chat_engines = {
         "KnowledgeAgent": {
             "filter": lambda prompt: "kurikulum" in prompt or "pedoman" in prompt,
-            "engine": create_chat_engine(index)
+            "engine": create_chat_engine(index_knowledge)  # KnowledgeAgent engine using MD data
         },
         "CSVAgent": {
             "filter": lambda prompt: "dosen" in prompt or "email" in prompt or "nomor wa" in prompt or "kontak" in prompt,  # Trigger for CSV agent
-            "engine": create_chat_engine(index)
+            "engine": create_chat_engine(index_csv)  # CSVAgent engine using CSV data
         },
         "GeneralAgent": {
             "filter": lambda prompt: True,  # Default fallback agent
-            "engine": create_chat_engine(index)
+            "engine": create_chat_engine(index_knowledge)  # General agent using MD data (fallback to MD)
         },
+        
     }
 
 # Display chat messages from history on app rerun
